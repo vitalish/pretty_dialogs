@@ -29,7 +29,7 @@ module PrettyDialogHelper
     attr_name  = options[:text] || name.to_s.capitalize
     attr_id    = options[:id]   || (prefix + name.to_s)
     attr_href  = options[:href] || "#"
-    attr_class = options[:button_class] || "button" + " " + options[:class].to_s
+    attr_class = (options[:button_class] || "button") + " " + options[:class].to_s
 
     %Q(<a id="#{attr_id}" class="#{attr_class}" href="#{attr_href}">#{attr_name}</a>)
   end
